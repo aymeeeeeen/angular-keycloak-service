@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>name</th>
+                <th>quantity</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="products">
+            <tr *ngFor="let p of products._embedded.products">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.quantite}}</td>
+                <td>{{p.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
